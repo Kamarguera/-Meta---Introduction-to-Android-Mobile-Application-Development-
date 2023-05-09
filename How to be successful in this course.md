@@ -1,6 +1,4 @@
 ﻿# Meta - Introduction to Android Mobile Application Development
-
-
 ###  How to be successful in this course
 Taking an online course can be overwhelming. How do you learn at your own pace and successfully achieve your goals? 
 
