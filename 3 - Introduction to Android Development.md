@@ -73,3 +73,23 @@ In Android, each **layout** is represented by an **XML** **file**. These plain t
 
 ##### Project Files
 Android Project Files belong to one of three main categories: configuration, code and resource. Configuration files define the project structure, code files provide the logic and resource files provide essentially everything else.
+
+### Anatomy of an Android App
+- Activities
+- Services
+- Broadcast Receivers
+- Content Providers
+
+##### Activities 
+- Represents a single screen
+##### Services
+- Update data sources and activities with latest changes
+- Perform Tasks
+
+##### Broadcast Receivers
+- Respond to messages from other applications or systems in real time
+- Example: notification when phone is low on battery
+
+##### Content Providers
+- Share data from one or more applications
+
