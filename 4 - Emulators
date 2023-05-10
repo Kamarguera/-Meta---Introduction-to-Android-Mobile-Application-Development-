@@ -1,1 +1,22 @@
-﻿
+﻿### What is an emulator?
+- Imitates a device
+- Allows app testing
+- Allows multiplatform testing eg. Apple to test on Windows and vice-versa
+- 7 commercial well known open-source Emulators 
+- Bluestacks, Appetize.io
+
+### Mobile App Testing (AVD)
+- Allows to define features about multiple existing devices
+  
+### Mobile CPU architecture ARM, ARM64 and x86?
+As of now, there are three main CPU architectures used in most smartphones --- ARM, ARM64 and x86. CPU types include:
+- ARM: ARMv7 or "Armeabi"
+- ARM64: AArch64 or arm64
+- x86: x86 or x86abi
+- ARM is the most common as it is properly optimized for battery use. 
+- ARM64 is an evolution of the original ARM architecture that supports 64-bit processing for more powerful computing and it's quickly becoming the standard in newer devices. 
+
+
+Then there's x86, which is a bit more powerful than the ARM CPUs, but not quite as battery-friendly, so it's the least commonly used of the three.
+
+Overall, ARM better embodies a mobile-first mentality, with simple instruction sets, efficiency and low power consumption as its major priorities. The fact that it requires fewer transistors and frees up that hardware space more than makes up for the use of RAM in a mobile device.
