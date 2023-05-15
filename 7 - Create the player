@@ -1,0 +1,88 @@
+﻿### Exercise: Create the player
+Following this reading exercise, you should be able to create a simple player app.
+
+### Lab objectives
+##### Goal
+
+Create a video player that plays a video file
+
+##### Objectives
+- Create an Android project
+
+- Add an mp4 video file to your new project
+
+- Create a user interface
+
+- Add import statements VideoView and MediaController to your Activity class
+
+- Add a  VideoView to activity_main.xml 
+
+- Add the code that plays video in the onCreate() function of MainActivity.kt 
+
+
+**Step 1:** Create a new project using Basic Activity Template and call it video_player. 
+![**Step 1:** Create a new project using Basic Activity Template and call it video_player. ](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/SYx4A_v3Sy2MeAP79ystWg_bc1d117cb9224140b4fb899c340db1e1_DB1-Picture-1.png?expiry=1684281600000&hmac=jzzWngiN_hD2dKaFUmv7h_D2uO4DGNgwpv-zQPjOrTs)
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/KTBx2qDCTbywcdqgwj28og_0c84df5d97d94c03bc0c7dd0c3b1a5e1_DB1-Picture-2.png?expiry=1684281600000&hmac=q3NFUUbTeiSCDsbUf3G2n_9kRiaVNcaITZasBgdPNyU)
+**Step 2:** Create a raw directory and add an mp4 video file to the folder.
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/83kO1xRYQwe5DtcUWOMHRw_cbede2a812a5445fbeb8fc2de0efe5e1_DB1-Picture-3.png?expiry=1684281600000&hmac=ruCyyBddexWas0nulGnv69HhqCIDwyL4kQfyoWj8tsc)
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/pfQA_JpuS2y0APyabhtsAA_bfb0917ece974026a0b671d45b4df2e1_DB1-Picture-4.png?expiry=1684281600000&hmac=snGAQymgF1Uf3QULo07ZdJgNJjg9H8XxHleKMjYTK0s)
+**Step 3:** In the activity_main.xml file, create a VideoView inside a ConstraintLayout: 
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:app="http://schemas.android.com/apk/res-auto"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    tools:context="com.example.video_player.MainActivity">  
+  
+    <VideoView  
+        android:id="@+id/testView"  
+        android:layout_width="wrap_content"  
+        android:layout_height="308dp"  
+        app:layout_constraintBottom_toBottomOf="parent"  
+        app:layout_constraintEnd_toEndOf="parent"  
+        app:layout_constraintStart_toStartOf="parent"  
+        app:layout_constraintTop_toTopOf="parent" />  
+</androidx.constraintlayout.widget.ConstraintLayout>   
+```
+**Step 4:** In MainActivity.kt class add the following import statements at the top of the file if they don't exist: 
+
+**Step 5:** In the onCreate function add this code snippet to play the video file.
+
+```kotlin
+setContentView(R.layout.activity_main) 
+
+//Find the VideoView class by its id 
+
+val videoView = findViewById(R.id.testView) 
+
+//Creating MediaController 
+
+val mediaController = MediaController(this) 
+
+mediaController.setAnchorView(videoView) 
+
+//specify the location of media file 
+
+val uri:Uri = parse( 
+
+"android.resource://" + packageName 
+
++ "/raw/test" 
+
+) 
+
+//Setting MediaController and URI, then starting the videoView 
+
+videoView.setMediaController(mediaController) 
+
+videoView.setVideoURI(uri) 
+
+videoView.requestFocus() 
+
+videoView.start() 
+```
+
+
+

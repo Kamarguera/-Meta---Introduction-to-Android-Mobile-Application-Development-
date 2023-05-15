@@ -1,0 +1,144 @@
+﻿### Requirements Gathering
+Project planning is essential for any app.
+
+- App idea: video player
+Need to think about what exactly the app needs to do:
+Streaming? Video art? Video formats? Video controls? Define libraries and packages. Stores files locally or cloud?
+
+### Basic project planning
+
+1. **Project success rates and performance**
+     Involves mapping and organization of project goals,   resources, tasks, schedules before assigning the project roles and implementation. The planning will boost performance and success rate of the team.
+2. **Clear objectives**
+     Project planning helps on the likelihood that the project will be done. The proper planning helps the team focus on the most important thing going on, the objectives and the main goal.
+3. **Resource allocation**
+      The project planning allows to measure how much effort will be needed to the project to be done.
+4. **Communication**
+     Planinng supports communication, this will help people involved on the project to know what will be required of them in the future during the project development. 
+6. **Project-specific Training**
+      Ensures team members have the required technical know-how to execute the assigned tasks and identifies talent pipelines to provide an adequate supply of trained talents throughout the lifecycle of the project.
+
+
+### Project proposal
+- Consider templates
+- For example in your video project you can set that users can select play and pause videos 
+- Basic activity template (commonly used UI on the project)
+
+### VideoView class (allows you to play video files in Android. )
+
+##### VideoView class methods
+
+- setVideoPath(String path)
+This specifies the path (as a string) of the video media to be played. Can be either a remote or a local video file.
+
+- setVideoUri(Uri uri)
+Takes a URI object as an argument instead of a string. It operates the same way as the setVideoPath() method.
+
+- start()
+Starts video playback.
+
+- stopPlayback() 
+Stops the video playback.
+
+- pause() 
+Pauses video playback.
+
+- isPlaying () 
+Returns a Boolean value that indicates whether a video is currently playing.
+
+### What is MediaController? ( is the user interface to control the video. )
+It's a view that contains media controls such as "Play/Pause", "Rewind", "Fast Forward" and a progress slider. It synchronizes the controls with the state of the MediaPlayer. 
+
+It has default set of controls. If you want to make changes to it, you have to implement the MediaController class programmatically within your Kotlin code. 
+
+You can also use **ExoPlayer** for audio and video streaming in Android apps, but it is not distributed with the Android SDK. To find out more about this, you can check out the additional readings for this lesson.
+
+
+### Setting up the screen
+A View is Android's built-in View class which is used to create a View and is then referred to as an object.     
+
+Layouts define the structure of UI components with different Views and ViewGroups.     
+
+View Group is used to define how Views will be arranged on the android screen.   
+
+- Android Linear Layout
+Renders different child views like text button etc.
+- Android Constraint Layout
+  position child views flexibly 
+- Android Recycler View
+  display sets of data that can be scrolled(example a list)
+- Android WebView
+  used to render webpages as part of an activity layout
+
+
+### What is a layout (interface UI)
+Holds the UI elements that will appear to the user.
+Related to layouts are **View** and **ViewGroup**
+
+- **View**
+Interactive UI components: TextView, ImageView, Label, RadioButton and so on. It is in charge of event handling and drawing. They are generally referred to as "widgets".
+
+- **ViewGroup**
+Parent class for layouts and layout parameters that hold other Views or ViewGroups and define the layout properties. They are generally referred to as "layouts".
+
+### Types of Android Layouts
+
+**LinearLayout**
+LinearLayout is a ViewGroup subclass used to render child View elements one after the other either horizontally or vertically based on the orientation property specified.
+
+**ConstraintLayout**
+ConstraintLayout is a ViewGroup subclass used to specify the position of layout constraints for every child View relative to other views on the screen.
+
+**Frame Layout**
+FrameLayout is a ViewGroup subclass used to specify the position of View elements it contains on the top of each other to display only a single View inside the FrameLayout.
+
+**Table Layout**
+TableLayout is a ViewGroup subclass used to display the child View elements in rows and columns.
+
+**WebView**
+WebView is a browser that is used to display the web pages in your activity layout.
+
+**RecyclerView**
+You can use RecyclerView with LinearLayoutManager to display scrollable lists of items in a single column. You can also use RecyclerView with GridLayoutManager to display a scrollable list of items in a grid view of rows and columns.
+
+### What are Views?
+The View object is created from the View class and occupies a rectangular screen area. It is responsible for the processing of drawings and events. 
+
+The View is the base class for widgets that are used to create interactive components of the user UI such as buttons or text fields.
+
+In summary, a View can be considered a rectangle on the screen that displays a certain type of content, like an image, a piece of text or even a button!
+
+Some of the most used Android Views include:
+- TextView
+
+- EditText
+
+- Button
+
+- ImageView
+
+- ImageButton
+
+- CheckBox
+
+- RadioButton
+
+- RecyclerView
+
+- DatePicker and
+
+- Spinner
+
+**match_parent** means it will occupy all of the available space available within its parent ViewGroup, whereas **wrap_content** means it will occupy only as much space as required for its content to display.
+
+Every View in XML has the following format:
+
+```
+<ViewName
+    Attribute1=Value1
+    Attribute2=Value2
+    Attribute3=Value3
+    AttributeN=ValueN
+/>
+```
+
