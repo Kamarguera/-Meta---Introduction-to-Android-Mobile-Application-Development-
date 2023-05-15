@@ -10,13 +10,25 @@
   
 ### Mobile CPU architecture ARM, ARM64 and x86?
 As of now, there are three main CPU architectures used in most smartphones --- ARM, ARM64 and x86. CPU types include:
-- ARM: ARMv7 or "Armeabi"
-- ARM64: AArch64 or arm64
-- x86: x86 or x86abi
-- ARM is the most common as it is properly optimized for battery use. 
-- ARM64 is an evolution of the original ARM architecture that supports 64-bit processing for more powerful computing and it's quickly becoming the standard in newer devices. 
+
+- ARM: ARMv7 or "Armeabi" (most common; optimized for battery use)
+- ARM64: AArch64 or arm64 (Support 64bits and it's becoming the new standard)
+- x86: x86 or x86abi (Least commonly used, better than ARM, not battery friendly)
 
 
-Then there's x86, which is a bit more powerful than the ARM CPUs, but not quite as battery-friendly, so it's the least commonly used of the three.
+Overall, **ARM** better embodies a mobile-first mentality, with **simple instruction sets**, **efficiency** and **low power consumption** as its major priorities. The fact that it requires fewer transistors and frees up that hardware space more than makes up for the use of RAM in a mobile device.
 
-Overall, ARM better embodies a mobile-first mentality, with simple instruction sets, efficiency and low power consumption as its major priorities. The fact that it requires fewer transistors and frees up that hardware space more than makes up for the use of RAM in a mobile device.
+
+### Operating System Images
+- Allows to test app on older and newer OS's
+- Higher api level means newer OS. E.g: API 33 is the newer Tiramisu OS 
+
+### Common libraries and packages
+Don't reinvent the wheel: most of common tasks already have a library for it.  These open source libraries are hosted on an external server and are downloaded by the build system, Gradle, when you are building a project.
+### Types of libraries
+- Image loading
+  - Fresco: image loading library that provides smooth scrolling, also helps avoiding high RAM conspumption
+- Videos
+  - ExoPlayer: easy customizable, built by Google. It's an alternative to Android's Media Player API.
+- Networking
+  - Retrofit: make internet calls within the application 
